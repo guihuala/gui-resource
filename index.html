@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="集合了各种创作的桂花资源">
+    <meta name="keywords" content="。">
+    <meta itemprop="image" content="./assets/9147.png" />
+    <meta itemprop="image" content="./assets/9147.png" />
+    <meta itemprop="image" content="./assets/9147.png" />
+    <meta name="google-adsense-account" content="ca-pub-1078287385751140">
+    <link rel="icon" href="public/桂花拉糕躺.png" type="image/png" />
+    <title>桂花资源站</title>
+    <script src="https://kit.fontawesome.com/25cfefa7b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/font_3165812_pvad0am2nmp.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/terminal.css">
+    <link rel="stylesheet" href="css/fira_code.css">
+    <script src="https://cdn.staticfile.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.net/layer/3.1.1/layer.js"></script>
+    <script src="js/fetch.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/Text.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/Right.css">
+    <!--  引入JS -->
+    <script src="js/Right.js"></script>
+    <script src="js/instantclick.min.js"></script>
+    <!-- data-no-instant表示该标签不进行预加载 -->
+    <script data-no-instant>
+        //选择点击瞬间预加载模式
+        InstantClick.init("mousedown");
+    </script>
+    <script type="text/javascript">
+        /*  动态网页标题*/
+        var OriginTitile = document.title,
+            titleTime;
+        document.addEventListener("visibilitychange",
+            function () {
+                if (document.hidden) {
+                    $('[rel="shortcut icon"]').attr("href", "./assets/favicon.png");
+                    document.title = "吱吱";
+                    clearTimeout(titleTime)
+                } else {
+                    $('[rel="shortcut icon"]').attr("href", "./assets/favicon.png");
+                    document.title = "桂花资源站" + OriginTitile;
+                    titleTime = setTimeout(function () {
+                        document.title = OriginTitile
+                    },
+                        2000)
+                }
+            });
+    </script>
+    <script src="https://cdn.staticfile.net/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script defer src="https://cdn.staticfile.net/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- 浏览器强制刷新 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- 添加版本号-每次更新要改版本号才会刷新缓存 -->
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=1.2.3">
+    <script src="service-worker.js?v=1.6"></script>
+    <script src="index.html?v=1.3.3"></script>
+    <script src="js/suiji-picture.js?v=1.2.2"></script>
+</head>
+
+<body>
+    <!-- 右键菜单 -->
+
+    <body oncontextmenu="openMenu(event)">
+        <div class="menu">
+            <ul class="menu-list01">
+                <li class="menu-item" onclick="toggleFullScreen()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path
+                            d="M200 32H56C42.7 32 32 42.7 32 56V200c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l40-40 79 79-79 79L73 295c-6.9-6.9-17.2-8.9-26.2-5.2S32 302.3 32 312V456c0 13.3 10.7 24 24 24H200c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2l-40-40 79-79 79 79-40 40c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H456c13.3 0 24-10.7 24-24V312c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2l-40 40-79-79 79-79 40 40c6.9 6.9 17.2 8.9 26.2 5.2s14.8-12.5 14.8-22.2V56c0-13.3-10.7-24-24-24H312c-9.7 0-18.5 5.8-22.2 14.8s-1.7 19.3 5.2 26.2l40 40-79 79-79-79 40-40c6.9-6.9 8.9-17.2 5.2-26.2S209.7 32 200 32z" />
+                    </svg>
+                    <span style="margin-left: 2px;">全屏</span>
+                </li>
+                <li class="menu-item" onclick="refreshPage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path
+                            d="M142.9 142.9c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5c0 0 0 0 0 0H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM16 312v7.6 .7V440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H48.4h-.7H40c-13.3 0-24 10.7-24 24z" />
+                    </svg>
+                    <span style="margin-left: 2.3px;">刷新</span>
+                </li>
+                <li class="menu-item" onclick="goBack()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                        <path
+                            d="M0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416zM128 256c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
+                    </svg>
+                    <span style="margin-left: 2.7px;">返回</span>
+                </li>
+                <li class="menu-item">
+                    <a href="https://github.com/rcy1314/noisework" target="_blank"
+                        style="color: white; text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                            <path
+                                d="M256 464a208 208 0 1 1 0-416 208 208 0 1 1 0 416zM256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM376.9 294.6c4.5-4.2 7.1-10.1 7.1-16.3c0-12.3-10-22.3-22.3-22.3H304V160c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32v96H150.3C138 256 128 266 128 278.3c0 6.2 2.6 12.1 7.1 16.3l107.1 99.9c3.8 3.5 8.7 5.5 13.8 5.5s10.1-2 13.8-5.5l107.1-99.9z" />
+                        </svg>
+                        <span style="margin-left: -4.5px;">支持主题</span>
+                    </a>
+                </li>
+                <li class="menu-item menu-item-danger">
+                    <a href="#" style="color: white; text-decoration: none;"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                        <path
+                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm175 79c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                    <span style="margin-left: 2px;">关闭</span>
+                </li>
+            </ul>
+        </div>
+        <!-- loading加载-->
+        <div id="spinner-container">
+            <div class="spinner"></div>
+        </div>
+        <!-- 弹窗信息提醒代码开始 -->
+        <script>
+            window.addEventListener('load', function () {
+                var currentTime = new Date().getHours();
+                var greeting;
+                if (currentTime < 5) {
+                    greeting = "该睡觉啦...";
+                } else if (currentTime < 8) {
+                    greeting = "早上好...";
+                } else if (currentTime < 11) {
+                    greeting = "上午好...";
+                } else if (currentTime < 13) {
+                    greeting = "中午好...";
+                } else if (currentTime < 18) {
+                    greeting = "下午好...";
+                } else if (currentTime < 19) {
+                    greeting = "傍晚好...";
+                } else if (currentTime < 24) {
+                    greeting = "晚上好...";
+                }
+
+                layer.msg(greeting + "欢迎访问...");
+            });
+        </script>
+        <!-- 弹窗信息提醒代码结束 -->
+        <!-- 添加Service Worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }).catch(function (error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+                });
+            }
+        </script>
+        <div class="node" id="node"></div>
+        <div class="cursor" id="cursor"></div>
+        <div id="sence">
+            <div id="background" data-depth="0.8"></div>
+            <div id="bg" data-depth="0.6"></div>
+            <script src="js/suiji-picture.js"></script>
+        </div>
+        <div class="main">
+            <div class="about">
+                <h2 class="chtitle"><span>桂花资源站</span>主页</h2>
+                <div id="clear">
+                    <div id="avatar"><a href="https://ghlg.fun/" title="桂花小站主站" target="_blank" id='morelink'
+                            class="bt"><i class="iconfont zac-link"></i></a></div>
+                    <div id="persontag">
+                        <div class="line">🐀&nbsp;绿鼠手作<div class="tag"></div>&nbsp;本站资源为绿鼠手作</div>
+                        <div class="line">🌊&nbsp;<div class="tag">背景是自己拍的各种水</div>
+                            <div class="line">🤖&nbsp;bot&nbsp;本页面包含ai机器人</div>
+                            <div class="line">🌳&nbsp;桂花糕欢迎所有访客</div>
+                        </div>
+                    </div>
+                    <div id="terminal"></div>
+                </div>
+                <!-- 隐藏式数字时钟-->
+                <div class="clock" id="clock">00:00:00</div>
+                <!--向下滑动提示-->
+                <div class="scroll-down">
+                    <span>向下滑动查看</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 16l-6-6h12z" />
+                    </svg>
+                </div>
+                <!--向下滑动提示结束-->
+                <div class="find">
+                    <h2 class="chtitle">桂花拉糕的<span>社交</span>媒体</h2>
+                    <div id="linkbox">
+                        <a href="https://x.com/HoyleLorel96127" target="_blank">
+                            <div class="item" style="--color: rgba(40, 169, 224,0.3)">
+                                <div class="bg" style="background-color:rgb(82, 82, 82)"></div>
+                                <div class="inner"><i class="fa-brands fa-x-twitter"></i><span>Twitter</span></div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/guihuala" target="_blank">
+                            <div class="item" style="--color:rgba(53, 53, 53,0.3)">
+                                <div class="bg" style="background-color:rgb(53, 53, 53)"></div>
+                                <div class="inner"> <i class="fa-brands fa-github"></i><span>Github</span></div>
+                            </div>
+                        </a>
+                        <a href="https://ghlg.fun/QRcode.jpg" target="_blank">
+                            <div class="item" style="--color:rgba(0, 102, 255,0.3)">
+                                <div class="bg" style="background-color:rgb(60, 151, 128)"></div>
+                                <div class="inner"> <i class="fa-brands fa-weixin"></i><span>公众号</span></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <h2 class="chtitle"><span>游戏与网站</span>合集</span>【滑动或左右键可切换】</h2>
+                    <div class="workbox">
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://pan.baidu.com/s/1c39RvRUDwFThkUOhe4ctOA?pwd=axn7" target="_blank">
+                                <h3>🐍hebibibi游戏下载</h3>
+                            </a>
+                            <p>非常无聊</p>
+                            <div class="language">
+                                <div style="--color:#f1e05a">游戏</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://noisevip.cn" target="_blank">
+                                <h3>🐦lenen2048</h3>
+                            </a>
+                            <p>换皮小游戏</p>
+                            <div class="language">
+                                <div style="--color:#f1e05a">游戏</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/" target="_blank">
+                                <h3>🐭桂花小站</h3>
+                            </a>
+                            <p>桂花拉糕博客</p>
+                            <div class="language">
+                                <div style="--color:#3572A5">blog</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/tsurubami/" target="_blank">
+                                <h3>🐈‍⬛盒餐桌宠</h3>
+                            </a>
+                            <p>网页桌宠</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="http://124.222.59.118/login" target="_blank">
+                                <h3>🐭mouse admin</h3>
+                            </a>
+                            <p>服务器在2024年下半年到期。</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/guihuala/" target="_blank">
+                                <h3>🔰初心者网页</h3>
+                            </a>
+                            <p>刚学前端的时候做的</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/barrage/" target="_blank">
+                                <h3>🌲私人树洞</h3>
+                            </a>
+                            <p>无论怎么发都没事</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/rotatingcat/" target="_blank">
+                                <h3>🐱3d猫猫</h3>
+                            </a>
+                            <p>three.js的尝试</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--隐藏式页脚-->
+        <div id="footer">
+            <p>本站已运行: <span id="days"></span></p>
+        </div>
+        <!--向下滑动监听-->
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                var scrollDown = document.querySelector('.scroll-down');
+
+                function handleScroll() {
+                    var scrollPos = window.pageYOffset;
+                    var windowHeight = window.innerHeight;
+                    var documentHeight = document.documentElement.scrollHeight;
+
+                    if (window.innerWidth <= 768) {
+                        if (scrollPos + windowHeight >= documentHeight) {
+                            scrollDown.style.display = 'none';
+                        } else {
+                            scrollDown.style.display = 'block';
+                        }
+                    } else {
+                        scrollDown.style.display = 'none';
+                    }
+                }
+
+                function handleButtonClick() {
+                    window.scrollBy({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+
+                scrollDown.addEventListener('click', handleButtonClick);
+                window.addEventListener('scroll', handleScroll);
+            });
+        </script>
+        <!--向下滑动监听结束-->
+
+        <script>
+            window.difyChatbotConfig = {
+                token: 'iqZjnzVGcXs3SQ0O'
+            }
+        </script>
+        <script src="https://udify.app/embed.min.js" id="iqZjnzVGcXs3SQ0O" defer>
+        </script>
+        <style>
+            #dify-chatbot-bubble-button {
+                background-color: #7ff1bd !important;
+            }
+        </style>
+        <script src="./js/emb.js" async></script>
+        <script src="js/nodecursor-jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/terminal.js"></script>
+        <script src="js/loading.js"></script>
+        <script src="js/tab.js"></script>
+        <script src="js/clock.js"></script>
+    </body>
+
+</html>
