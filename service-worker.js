@@ -1,13 +1,13 @@
-var cacheName = 'Noise主页-v1.3.4';
+var cacheName = 'gui-resource v1.0.0';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll([
         '/',
-        'https://jsd.onmicrosoft.cn/gh/rcy1314/noisework/assets/',
-        'https://jsd.onmicrosoft.cn/gh/rcy1314/noisework/css/main.css',
-        'https://jsd.onmicrosoft.cn/gh/rcy1314/noisework/js/main.js',
+        '/public/',
+        '/css/main.css',
+        '/js/main.js',
         // 添加您需要缓存的其他静态资源
       ]);
     })
