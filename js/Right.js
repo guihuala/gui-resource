@@ -69,6 +69,10 @@ function goBack() {
     window.history.back();
 }
 
+function changeMode() {
+    // Your code to change the mode goes here
+}
+
 function showImage() {
     var overlay = document.createElement("div");
     overlay.style.position = "fixed";
@@ -94,3 +98,4 @@ function showImage() {
     overlay.appendChild(image);
     document.body.appendChild(overlay);
 }
+
