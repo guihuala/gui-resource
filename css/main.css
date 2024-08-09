@@ -42,6 +42,7 @@ body,html {
 /* 画布尺寸 */
 .main{
 	width: 990px;
+	height: 100vh;
     padding: 20px 330px 15px 30px;
     background: linear-gradient(to right, rgba(34, 34, 34, 0.849), rgba(34, 34, 34, 0) 600px,rgba(34, 34, 34, 0));
 }
