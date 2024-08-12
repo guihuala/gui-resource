@@ -259,6 +259,16 @@
                         </div>
                         <div class="project">
                             <i class="fa-solid fa-star"></i>
+                            <a href="https://ghlg.fun/Gui-edit/" target="_blank">
+                                <h3>🖊️Gui-edit</h3>
+                            </a>
+                            <p>md编辑器</p>
+                            <div class="language">
+                                <div style="--color:#e34c26">网页</div>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <i class="fa-solid fa-star"></i>
                             <a href="https://ghlg.fun/tsurubami/" target="_blank">
                                 <h3>🐈‍⬛盒餐桌宠</h3>
                             </a>
@@ -354,13 +364,18 @@
                 token: 'iqZjnzVGcXs3SQ0O'
             }
         </script>
-        <script src="https://udify.app/embed.min.js" id="iqZjnzVGcXs3SQ0O" defer>
+        <script
+            src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/cn/index.js"></script>
+        <script>
+            new CozeWebSDK.WebChatClient({
+                config: {
+                    bot_id: '7369461848434966578',
+                },
+                componentProps: {
+                    title: 'Coze',
+                },
+            });
         </script>
-        <style>
-            #dify-chatbot-bubble-button {
-                background-color: #7ff1bd !important;
-            }
-        </style>
         <script src="./js/emb.js" async></script>
         <script src="js/nodecursor-jquery.js"></script>
         <script src="js/main.js"></script>
